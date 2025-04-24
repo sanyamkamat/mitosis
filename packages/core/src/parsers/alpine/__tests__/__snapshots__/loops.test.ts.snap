@@ -1,0 +1,238 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`alpineToMitosisComponent: Loops > should handle basic x-for 1`] = `
+{
+  "@type": "@builder.io/mitosis/component",
+  "children": [
+    {
+      "@type": "@builder.io/mitosis/node",
+      "bindings": {},
+      "children": [
+        {
+          "@type": "@builder.io/mitosis/node",
+          "bindings": {},
+          "children": [
+            {
+              "@type": "@builder.io/mitosis/node",
+              "bindings": {
+                "each": {
+                  "bindingType": "expression",
+                  "code": "state.items",
+                  "type": "single",
+                },
+              },
+              "children": [
+                {
+                  "@type": "@builder.io/mitosis/node",
+                  "bindings": {
+                    "each": {
+                      "bindingType": "expression",
+                      "code": "state.items",
+                      "type": "single",
+                    },
+                  },
+                  "children": [],
+                  "meta": {},
+                  "name": "template",
+                  "properties": {},
+                  "scope": {},
+                },
+              ],
+              "meta": {},
+              "name": "For",
+              "properties": {},
+              "scope": {
+                "forName": "item",
+              },
+            },
+          ],
+          "meta": {},
+          "name": "ul",
+          "properties": {},
+          "scope": {},
+        },
+      ],
+      "meta": {},
+      "name": "div",
+      "properties": {},
+      "scope": {},
+    },
+  ],
+  "context": {
+    "get": {},
+    "set": {},
+  },
+  "exports": {},
+  "hooks": {
+    "onEvent": [],
+    "onMount": [],
+  },
+  "imports": [],
+  "inputs": [],
+  "meta": {},
+  "name": "MyComponent",
+  "refs": {},
+  "state": {
+    "items": {
+      "code": "['foo', 'bar']",
+      "type": "property",
+    },
+  },
+  "subComponents": [],
+}
+`;
+
+exports[`alpineToMitosisComponent: Loops > should handle nested x-for 1`] = `
+{
+  "@type": "@builder.io/mitosis/component",
+  "children": [
+    {
+      "@type": "@builder.io/mitosis/node",
+      "bindings": {},
+      "children": [
+        {
+          "@type": "@builder.io/mitosis/node",
+          "bindings": {
+            "each": {
+              "bindingType": "expression",
+              "code": "state.groups",
+              "type": "single",
+            },
+          },
+          "children": [
+            {
+              "@type": "@builder.io/mitosis/node",
+              "bindings": {
+                "each": {
+                  "bindingType": "expression",
+                  "code": "state.groups",
+                  "type": "single",
+                },
+              },
+              "children": [],
+              "meta": {},
+              "name": "template",
+              "properties": {},
+              "scope": {},
+            },
+          ],
+          "meta": {},
+          "name": "For",
+          "properties": {},
+          "scope": {
+            "forName": "group",
+          },
+        },
+      ],
+      "meta": {},
+      "name": "div",
+      "properties": {},
+      "scope": {},
+    },
+  ],
+  "context": {
+    "get": {},
+    "set": {},
+  },
+  "exports": {},
+  "hooks": {
+    "onEvent": [],
+    "onMount": [],
+  },
+  "imports": [],
+  "inputs": [],
+  "meta": {},
+  "name": "MyComponent",
+  "refs": {},
+  "state": {
+    "groups": {
+      "code": "[{ name: 'G1', items: ['A', 'B'] }, { name: 'G2', items: ['C', 'D'] }]",
+      "type": "property",
+    },
+  },
+  "subComponents": [],
+}
+`;
+
+exports[`alpineToMitosisComponent: Loops > should handle x-for with index 1`] = `
+{
+  "@type": "@builder.io/mitosis/component",
+  "children": [
+    {
+      "@type": "@builder.io/mitosis/node",
+      "bindings": {},
+      "children": [
+        {
+          "@type": "@builder.io/mitosis/node",
+          "bindings": {},
+          "children": [
+            {
+              "@type": "@builder.io/mitosis/node",
+              "bindings": {
+                "each": {
+                  "bindingType": "expression",
+                  "code": "state.items",
+                  "type": "single",
+                },
+              },
+              "children": [
+                {
+                  "@type": "@builder.io/mitosis/node",
+                  "bindings": {
+                    "each": {
+                      "bindingType": "expression",
+                      "code": "state.items",
+                      "type": "single",
+                    },
+                  },
+                  "children": [],
+                  "meta": {},
+                  "name": "template",
+                  "properties": {},
+                  "scope": {},
+                },
+              ],
+              "meta": {},
+              "name": "For",
+              "properties": {},
+              "scope": {
+                "forName": "item",
+                "indexName": "index",
+              },
+            },
+          ],
+          "meta": {},
+          "name": "dl",
+          "properties": {},
+          "scope": {},
+        },
+      ],
+      "meta": {},
+      "name": "div",
+      "properties": {},
+      "scope": {},
+    },
+  ],
+  "context": {
+    "get": {},
+    "set": {},
+  },
+  "exports": {},
+  "hooks": {
+    "onEvent": [],
+    "onMount": [],
+  },
+  "imports": [],
+  "inputs": [],
+  "meta": {},
+  "name": "MyComponent",
+  "refs": {},
+  "state": {
+    "items": {
+      "code": "['A', 'B', 'C']",
+      "type": "property",
+    },
+  },
+  "subComponents": [],
+}
+`;

@@ -1,0 +1,336 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`alpineToMitosisComponent: Simple Cases > should handle basic text 1`] = `
+{
+  "@type": "@builder.io/mitosis/component",
+  "children": [
+    {
+      "@type": "@builder.io/mitosis/node",
+      "bindings": {},
+      "children": [
+        {
+          "@type": "@builder.io/mitosis/node",
+          "bindings": {},
+          "children": [],
+          "meta": {},
+          "name": "#text",
+          "properties": {
+            "_text": "Hello World",
+          },
+          "scope": {},
+        },
+      ],
+      "meta": {},
+      "name": "div",
+      "properties": {},
+      "scope": {},
+    },
+  ],
+  "context": {
+    "get": {},
+    "set": {},
+  },
+  "exports": {},
+  "hooks": {
+    "onEvent": [],
+    "onMount": [],
+  },
+  "imports": [],
+  "inputs": [],
+  "meta": {},
+  "name": "MyComponent",
+  "refs": {},
+  "state": {},
+  "subComponents": [],
+}
+`;
+
+exports[`alpineToMitosisComponent: Simple Cases > should handle x-html 1`] = `
+{
+  "@type": "@builder.io/mitosis/component",
+  "children": [
+    {
+      "@type": "@builder.io/mitosis/node",
+      "bindings": {},
+      "children": [
+        {
+          "@type": "@builder.io/mitosis/node",
+          "bindings": {
+            "innerHTML": {
+              "bindingType": "expression",
+              "code": "state.content",
+              "type": "single",
+            },
+          },
+          "children": [],
+          "meta": {},
+          "name": "span",
+          "properties": {},
+          "scope": {},
+        },
+      ],
+      "meta": {},
+      "name": "div",
+      "properties": {},
+      "scope": {},
+    },
+  ],
+  "context": {
+    "get": {},
+    "set": {},
+  },
+  "exports": {},
+  "hooks": {
+    "onEvent": [],
+    "onMount": [],
+  },
+  "imports": [],
+  "inputs": [],
+  "meta": {},
+  "name": "MyComponent",
+  "refs": {},
+  "state": {
+    "content": {
+      "code": "'<b>Bold</b>'",
+      "type": "property",
+    },
+  },
+  "subComponents": [],
+}
+`;
+
+exports[`alpineToMitosisComponent: Simple Cases > should handle x-ref and x-init 1`] = `
+{
+  "@type": "@builder.io/mitosis/component",
+  "children": [
+    {
+      "@type": "@builder.io/mitosis/node",
+      "bindings": {
+        "onMount": {
+          "bindingType": "expression",
+          "code": "state.text = $refs.myInput.value",
+          "type": "single",
+        },
+      },
+      "children": [
+        {
+          "@type": "@builder.io/mitosis/node",
+          "bindings": {
+            "ref": {
+              "bindingType": "expression",
+              "code": "'myInput'",
+              "type": "single",
+            },
+          },
+          "children": [],
+          "meta": {},
+          "name": "input",
+          "properties": {
+            "value": "Initial Value",
+          },
+          "scope": {},
+        },
+        {
+          "@type": "@builder.io/mitosis/node",
+          "bindings": {
+            "_text": {
+              "bindingType": "expression",
+              "code": "state.text",
+              "type": "single",
+            },
+          },
+          "children": [],
+          "meta": {},
+          "name": "span",
+          "properties": {},
+          "scope": {},
+        },
+      ],
+      "meta": {},
+      "name": "div",
+      "properties": {},
+      "scope": {},
+    },
+  ],
+  "context": {
+    "get": {},
+    "set": {},
+  },
+  "exports": {},
+  "hooks": {
+    "onEvent": [],
+    "onMount": [],
+  },
+  "imports": [],
+  "inputs": [],
+  "meta": {},
+  "name": "MyComponent",
+  "refs": {},
+  "state": {
+    "text": {
+      "code": "''",
+      "type": "property",
+    },
+  },
+  "subComponents": [],
+}
+`;
+
+exports[`alpineToMitosisComponent: Simple Cases > should handle x-show 1`] = `
+{
+  "@type": "@builder.io/mitosis/component",
+  "children": [
+    {
+      "@type": "@builder.io/mitosis/node",
+      "bindings": {},
+      "children": [
+        {
+          "@type": "@builder.io/mitosis/node",
+          "bindings": {
+            "show": {
+              "bindingType": "expression",
+              "code": "state.open",
+              "type": "single",
+            },
+          },
+          "children": [
+            {
+              "@type": "@builder.io/mitosis/node",
+              "bindings": {},
+              "children": [],
+              "meta": {},
+              "name": "#text",
+              "properties": {
+                "_text": "Visible",
+              },
+              "scope": {},
+            },
+          ],
+          "meta": {},
+          "name": "span",
+          "properties": {},
+          "scope": {},
+        },
+      ],
+      "meta": {},
+      "name": "div",
+      "properties": {},
+      "scope": {},
+    },
+  ],
+  "context": {
+    "get": {},
+    "set": {},
+  },
+  "exports": {},
+  "hooks": {
+    "onEvent": [],
+    "onMount": [],
+  },
+  "imports": [],
+  "inputs": [],
+  "meta": {},
+  "name": "MyComponent",
+  "refs": {},
+  "state": {
+    "open": {
+      "code": "true",
+      "type": "property",
+    },
+  },
+  "subComponents": [],
+}
+`;
+
+exports[`alpineToMitosisComponent: Simple Cases > should parse a simple counter component 1`] = `
+{
+  "@type": "@builder.io/mitosis/component",
+  "children": [
+    {
+      "@type": "@builder.io/mitosis/node",
+      "bindings": {},
+      "children": [
+        {
+          "@type": "@builder.io/mitosis/node",
+          "bindings": {
+            "onClick": {
+              "bindingType": "expression",
+              "code": "state.count++",
+              "type": "single",
+            },
+          },
+          "children": [
+            {
+              "@type": "@builder.io/mitosis/node",
+              "bindings": {},
+              "children": [],
+              "meta": {},
+              "name": "#text",
+              "properties": {
+                "_text": "Increment",
+              },
+              "scope": {},
+            },
+          ],
+          "meta": {},
+          "name": "button",
+          "properties": {},
+          "scope": {},
+        },
+        {
+          "@type": "@builder.io/mitosis/node",
+          "bindings": {
+            "_text": {
+              "bindingType": "expression",
+              "code": "state.count",
+              "type": "single",
+            },
+          },
+          "children": [
+            {
+              "@type": "@builder.io/mitosis/node",
+              "bindings": {},
+              "children": [],
+              "meta": {},
+              "name": "#text",
+              "properties": {
+                "_text": "0",
+              },
+              "scope": {},
+            },
+          ],
+          "meta": {},
+          "name": "span",
+          "properties": {},
+          "scope": {},
+        },
+      ],
+      "meta": {},
+      "name": "div",
+      "properties": {},
+      "scope": {},
+    },
+  ],
+  "context": {
+    "get": {},
+    "set": {},
+  },
+  "exports": {},
+  "hooks": {
+    "onEvent": [],
+    "onMount": [],
+  },
+  "imports": [],
+  "inputs": [],
+  "meta": {},
+  "name": "MyComponent",
+  "refs": {},
+  "state": {
+    "count": {
+      "code": "0",
+      "type": "property",
+    },
+  },
+  "subComponents": [],
+}
+`;

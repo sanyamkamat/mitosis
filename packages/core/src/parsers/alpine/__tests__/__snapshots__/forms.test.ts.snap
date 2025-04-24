@@ -1,0 +1,157 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`alpineToMitosisComponent: Forms > should handle basic x-model on text input 1`] = `
+{
+  "@type": "@builder.io/mitosis/component",
+  "children": [
+    {
+      "@type": "@builder.io/mitosis/node",
+      "bindings": {},
+      "children": [
+        {
+          "@type": "@builder.io/mitosis/node",
+          "bindings": {
+            "onChange": {
+              "arguments": [
+                "event",
+              ],
+              "bindingType": "expression",
+              "code": "state.message = event.target.value",
+              "type": "single",
+            },
+            "value": {
+              "bindingType": "expression",
+              "code": "state.message",
+              "type": "single",
+            },
+          },
+          "children": [],
+          "meta": {},
+          "name": "input",
+          "properties": {
+            "type": "text",
+          },
+          "scope": {},
+        },
+        {
+          "@type": "@builder.io/mitosis/node",
+          "bindings": {
+            "_text": {
+              "bindingType": "expression",
+              "code": "state.message",
+              "type": "single",
+            },
+          },
+          "children": [],
+          "meta": {},
+          "name": "span",
+          "properties": {},
+          "scope": {},
+        },
+      ],
+      "meta": {},
+      "name": "div",
+      "properties": {},
+      "scope": {},
+    },
+  ],
+  "context": {
+    "get": {},
+    "set": {},
+  },
+  "exports": {},
+  "hooks": {
+    "onEvent": [],
+    "onMount": [],
+  },
+  "imports": [],
+  "inputs": [],
+  "meta": {},
+  "name": "MyComponent",
+  "refs": {},
+  "state": {
+    "message": {
+      "code": "'Hello'",
+      "type": "property",
+    },
+  },
+  "subComponents": [],
+}
+`;
+
+exports[`alpineToMitosisComponent: Forms > should handle x-model on textarea 1`] = `
+{
+  "@type": "@builder.io/mitosis/component",
+  "children": [
+    {
+      "@type": "@builder.io/mitosis/node",
+      "bindings": {},
+      "children": [
+        {
+          "@type": "@builder.io/mitosis/node",
+          "bindings": {
+            "onChange": {
+              "arguments": [
+                "event",
+              ],
+              "bindingType": "expression",
+              "code": "state.text = event.target.value",
+              "type": "single",
+            },
+            "value": {
+              "bindingType": "expression",
+              "code": "state.text",
+              "type": "single",
+            },
+          },
+          "children": [],
+          "meta": {},
+          "name": "textarea",
+          "properties": {},
+          "scope": {},
+        },
+        {
+          "@type": "@builder.io/mitosis/node",
+          "bindings": {
+            "_text": {
+              "bindingType": "expression",
+              "code": "state.text",
+              "type": "single",
+            },
+          },
+          "children": [],
+          "meta": {},
+          "name": "pre",
+          "properties": {},
+          "scope": {},
+        },
+      ],
+      "meta": {},
+      "name": "div",
+      "properties": {},
+      "scope": {},
+    },
+  ],
+  "context": {
+    "get": {},
+    "set": {},
+  },
+  "exports": {},
+  "hooks": {
+    "onEvent": [],
+    "onMount": [],
+  },
+  "imports": [],
+  "inputs": [],
+  "meta": {},
+  "name": "MyComponent",
+  "refs": {},
+  "state": {
+    "text": {
+      "code": "'Long text'",
+      "type": "property",
+    },
+  },
+  "subComponents": [],
+}
+`;

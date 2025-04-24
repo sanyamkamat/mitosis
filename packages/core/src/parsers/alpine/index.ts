@@ -1,5 +1,5 @@
 import * as parse5 from 'parse5';
-import { CommentNode, DocumentFragment, Element, Node, TextNode } from 'parse5/dist/tree-adapters/default';
+import { CommentNode, DocumentFragment, Element, Node, TextNode } from 'node_modules/parse5/dist/cjs/tree-adapters/default';
 import { createMitosisComponent } from '../../helpers/create-mitosis-component';
 import { createMitosisNode } from '../../helpers/create-mitosis-node';
 import { MitosisComponent } from '../../types/mitosis-component';
@@ -93,12 +93,24 @@ function transformNode(
       }
     }
 
+    // Find the type attribute for input elements
+    const typeAttribute = node.tagName === 'input' 
+        ? node.attrs.find(attr => attr.name === 'type')?.value
+        : undefined;
+
+    // Prepare nodeDetails object
+    const nodeDetails = {
+        tagName: node.tagName,
+        typeAttribute: typeAttribute,
+        parse5Node: node // Pass the original parse5 Element node
+    };
+
     // Process directives - order might matter (e.g., x-data first)
     // This basic loop doesn't enforce order, might need refinement
     for (const [directiveName, value, modifiers] of alpineDirectives) {
       const handler = directiveHandlers[directiveName];
       if (handler) {
-        const partialNode = handler(node, value, modifiers);
+        const partialNode = handler(value, modifiers, nodeDetails);
         
         // Special handling for state merging from x-data (expecting it in meta)
         if (directiveName === 'x-data' && partialNode.meta?.alpineState) {
@@ -149,7 +161,7 @@ function transformNode(
         if(mitosisNode.name === 'Show') {
             const xIfDirective = alpineDirectives.find(d => d[0] === 'x-if');
             if (xIfDirective) {
-                structuralBindings.when = directiveHandlers['x-if'](node, xIfDirective[1], []).bindings?.when;
+                structuralBindings.when = directiveHandlers['x-if'](node, xIfDirective, []).bindings?.when;
             }
         }
         if(mitosisNode.name === 'For') {

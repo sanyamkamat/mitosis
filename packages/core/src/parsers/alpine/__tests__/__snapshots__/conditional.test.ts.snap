@@ -1,0 +1,246 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`alpineToMitosisComponent: Conditionals > should handle basic x-if 1`] = `
+{
+  "@type": "@builder.io/mitosis/component",
+  "children": [
+    {
+      "@type": "@builder.io/mitosis/node",
+      "bindings": {},
+      "children": [
+        {
+          "@type": "@builder.io/mitosis/node",
+          "bindings": {
+            "when": {
+              "bindingType": "expression",
+              "code": "state.show",
+              "type": "single",
+            },
+          },
+          "children": [
+            {
+              "@type": "@builder.io/mitosis/node",
+              "bindings": {
+                "when": {
+                  "bindingType": "expression",
+                  "code": "state.show",
+                  "type": "single",
+                },
+              },
+              "children": [],
+              "meta": {},
+              "name": "template",
+              "properties": {},
+              "scope": {},
+            },
+          ],
+          "meta": {},
+          "name": "Show",
+          "properties": {},
+          "scope": {},
+        },
+      ],
+      "meta": {},
+      "name": "div",
+      "properties": {},
+      "scope": {},
+    },
+  ],
+  "context": {
+    "get": {},
+    "set": {},
+  },
+  "exports": {},
+  "hooks": {
+    "onEvent": [],
+    "onMount": [],
+  },
+  "imports": [],
+  "inputs": [],
+  "meta": {},
+  "name": "MyComponent",
+  "refs": {},
+  "state": {
+    "show": {
+      "code": "true",
+      "type": "property",
+    },
+  },
+  "subComponents": [],
+}
+`;
+
+exports[`alpineToMitosisComponent: Conditionals > should handle nested x-if 1`] = `
+{
+  "@type": "@builder.io/mitosis/component",
+  "children": [
+    {
+      "@type": "@builder.io/mitosis/node",
+      "bindings": {},
+      "children": [
+        {
+          "@type": "@builder.io/mitosis/node",
+          "bindings": {
+            "when": {
+              "bindingType": "expression",
+              "code": "state.showOuter",
+              "type": "single",
+            },
+          },
+          "children": [
+            {
+              "@type": "@builder.io/mitosis/node",
+              "bindings": {
+                "when": {
+                  "bindingType": "expression",
+                  "code": "state.showOuter",
+                  "type": "single",
+                },
+              },
+              "children": [],
+              "meta": {},
+              "name": "template",
+              "properties": {},
+              "scope": {},
+            },
+          ],
+          "meta": {},
+          "name": "Show",
+          "properties": {},
+          "scope": {},
+        },
+      ],
+      "meta": {},
+      "name": "div",
+      "properties": {},
+      "scope": {},
+    },
+  ],
+  "context": {
+    "get": {},
+    "set": {},
+  },
+  "exports": {},
+  "hooks": {
+    "onEvent": [],
+    "onMount": [],
+  },
+  "imports": [],
+  "inputs": [],
+  "meta": {},
+  "name": "MyComponent",
+  "refs": {},
+  "state": {
+    "showInner": {
+      "code": "false",
+      "type": "property",
+    },
+    "showOuter": {
+      "code": "true",
+      "type": "property",
+    },
+  },
+  "subComponents": [],
+}
+`;
+
+exports[`alpineToMitosisComponent: Conditionals > should handle x-if with else (via adjacent templates) 1`] = `
+{
+  "@type": "@builder.io/mitosis/component",
+  "children": [
+    {
+      "@type": "@builder.io/mitosis/node",
+      "bindings": {},
+      "children": [
+        {
+          "@type": "@builder.io/mitosis/node",
+          "bindings": {
+            "when": {
+              "bindingType": "expression",
+              "code": "state.show",
+              "type": "single",
+            },
+          },
+          "children": [
+            {
+              "@type": "@builder.io/mitosis/node",
+              "bindings": {
+                "when": {
+                  "bindingType": "expression",
+                  "code": "state.show",
+                  "type": "single",
+                },
+              },
+              "children": [],
+              "meta": {},
+              "name": "template",
+              "properties": {},
+              "scope": {},
+            },
+          ],
+          "meta": {},
+          "name": "Show",
+          "properties": {},
+          "scope": {},
+        },
+        {
+          "@type": "@builder.io/mitosis/node",
+          "bindings": {
+            "when": {
+              "bindingType": "expression",
+              "code": "!state.show",
+              "type": "single",
+            },
+          },
+          "children": [
+            {
+              "@type": "@builder.io/mitosis/node",
+              "bindings": {
+                "when": {
+                  "bindingType": "expression",
+                  "code": "!state.show",
+                  "type": "single",
+                },
+              },
+              "children": [],
+              "meta": {},
+              "name": "template",
+              "properties": {},
+              "scope": {},
+            },
+          ],
+          "meta": {},
+          "name": "Show",
+          "properties": {},
+          "scope": {},
+        },
+      ],
+      "meta": {},
+      "name": "div",
+      "properties": {},
+      "scope": {},
+    },
+  ],
+  "context": {
+    "get": {},
+    "set": {},
+  },
+  "exports": {},
+  "hooks": {
+    "onEvent": [],
+    "onMount": [],
+  },
+  "imports": [],
+  "inputs": [],
+  "meta": {},
+  "name": "MyComponent",
+  "refs": {},
+  "state": {
+    "show": {
+      "code": "false",
+      "type": "property",
+    },
+  },
+  "subComponents": [],
+}
+`;
