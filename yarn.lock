@@ -3559,6 +3559,7 @@ __metadata:
     "@types/lodash": "npm:^4.14.165"
     "@types/node": "npm:^15.12.0"
     "@types/object-hash": "npm:^1.3.4"
+    "@types/parse5": "npm:^7.0.0"
     "@types/prettier": "npm:^2.1.5"
     "@types/rollup__plugin-virtual": "npm:^2.0.1"
     astring: "npm:^1.8.6"
@@ -3570,6 +3571,7 @@ __metadata:
     lodash: "npm:^4.17.20"
     neotraverse: "npm:^0.6.15"
     object-hash: "npm:^2.0.3"
+    parse5: "npm:^7.1.2"
     prettier: "npm:>=2.0.0 <3.0.0"
     prettier-plugin-organize-imports: "npm:^3.2.3"
     prettier-plugin-svelte: "npm:^2.10.0"
@@ -7339,6 +7341,15 @@ __metadata:
   version: 4.0.0
   resolution: "@types/parse-json@npm:4.0.0"
   checksum: 10/4df9de98150d2978afc2161482a3a8e6617883effba3223324f079de97ba7eabd7d84b90ced11c3f82b0c08d4a8383f678c9f73e9c41258f769b3fa234a2bb4f
+  languageName: node
+  linkType: hard
+
+"@types/parse5@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "@types/parse5@npm:7.0.0"
+  dependencies:
+    parse5: "npm:*"
+  checksum: 10/ae9ffc515ac3130e125922ef4cc1cd98ec29f2b841b5c5da4b3ca47b7d580b38ffbc0f82554739ffb3cf620876d662434af8ffbcec229687512263fdeb183bed
   languageName: node
   linkType: hard
 
@@ -11792,6 +11803,13 @@ __metadata:
   version: 4.4.0
   resolution: "entities@npm:4.4.0"
   checksum: 10/b627cb900e901cc7817037b83bf993a1cbf6a64850540f7526af7bcf9c7d09ebc671198e6182cfae4680f733799e2852e6a1c46aa62ff36eb99680057a038df5
+  languageName: node
+  linkType: hard
+
+"entities@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "entities@npm:6.0.0"
+  checksum: 10/cf37a4aad887ba8573532346da1c78349dccd5b510a9bbddf92fe59b36b18a8b26fe619a862de4e7fd3b8addc6d5e0969261198bbeb690da87297011a61b7066
   languageName: node
   linkType: hard
 
@@ -19286,6 +19304,15 @@ __metadata:
   dependencies:
     parse5: "npm:^7.0.0"
   checksum: 10/b3b6ea12a38b58871111f7e235c31f96776b382d0b066b6dee17f815a13754bb3248a9a76007168e2a30d66def14161efcffb0bc8d71848a2159e6974b949c00
+  languageName: node
+  linkType: hard
+
+"parse5@npm:*, parse5@npm:^7.1.2":
+  version: 7.3.0
+  resolution: "parse5@npm:7.3.0"
+  dependencies:
+    entities: "npm:^6.0.0"
+  checksum: 10/b0e48be20b820c655b138b86fa6fb3a790de6c891aa2aba536524f8027b4dca4fe538f11a0e5cf2f6f847d120dbb9e4822dcaeb933ff1e10850a2ef0154d1d88
   languageName: node
   linkType: hard
 
