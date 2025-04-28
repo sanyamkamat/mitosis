@@ -1,0 +1,23 @@
+<style>
+  .test { 
+    color: blue;
+    display: flex;
+    align-items: center;
+    width: 100px;
+  }
+  @media (max-width: 768px) {
+    .test { 
+      color: red;
+      flex-direction: column;
+    }
+  }
+  
+  /* Circle class comes after test, so its styles should override */
+  .circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 48px;
+    background: #C8E2EE;
+  }
+</style>
+<div class="test circle">Test Text</div>
